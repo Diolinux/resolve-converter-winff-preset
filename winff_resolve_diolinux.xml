@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<presets>
+  <Davinci-Resolve-720p>
+    <label>MPEG - 720p</label>
+    <params>-codec:v mpeg4 -q:v 0 -codec:a pcm_s16le -vf scale=w=1280:h=720 </params>
+    <extension>mov</extension>
+    <category>Resolve</category>
+  </Davinci-Resolve-720p>
+  <Davinci-Resolve-1080p>
+    <label>MPEG - 1080p</label>
+    <params>-codec:v mpeg4 -q:v 0 -codec:a pcm_s16le  -vf scale=w=1920:h=1280 </params>
+    <extension>mov</extension>
+    <category>Resolve</category>
+  </Davinci-Resolve-1080p>
+    <Davinci-Resolve>
+    <label>MPEG - Mantem formato</label>
+    <params>-codec:v mpeg4 -q:v 0 -codec:a pcm_s16le </params>
+    <extension>mov</extension>
+    <category>Resolve</category>
+  </Davinci-Resolve>
+    <Davinci-Resolve-ProRes>
+    <label>ProRes</label>
+    <params>-vcodec prores_ks -qscale 0 -acodec pcm_s16le -ac 1 -ar 22050 </params>
+    <extension>mov</extension>
+    <category>Resolve</category>
+  </Davinci-Resolve-ProRes>
+</presets>
