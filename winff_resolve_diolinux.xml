@@ -1,27 +1,45 @@
 <?xml version="1.0"?>
 <presets>
   <Davinci-Resolve-720p>
-    <label>MPEG - 720p</label>
-    <params>-codec:v mpeg4 -map 0 -q:v 0 -codec:a pcm_s16le -vf scale=w=1280:h=720 </params>
+    <label>MPEG 4 - 720p</label>
+    <params>-codec:v mpeg4 -map 0 -q:v 0 -codec:a pcm_s16le -vf scale=w=1280:h=720</params>
     <extension>mov</extension>
     <category>Resolve</category>
   </Davinci-Resolve-720p>
   <Davinci-Resolve-1080p>
-    <label>MPEG - 1080p</label>
-    <params>-codec:v mpeg4 -map 0 -q:v 0 -codec:a pcm_s16le  -vf scale=w=1920:h=1280 </params>
+    <label>MPEG 4 - 1080p</label>
+    <params>-codec:v mpeg4 -map 0 -q:v 0 -codec:a pcm_s16le  -vf scale=w=1920:h=1080</params>
     <extension>mov</extension>
     <category>Resolve</category>
   </Davinci-Resolve-1080p>
-    <Davinci-Resolve>
-    <label>MPEG - Mantem formato</label>
-    <params>-codec:v mpeg4 -map 0 -q:v 0 -codec:a pcm_s16le </params>
+  <Davinci-Resolve-original>
+    <label>MPEG 4 - Mantem formato</label>
+    <params>-codec:v mpeg4 -map 0 -q:v 0 -codec:a pcm_s16le</params>
     <extension>mov</extension>
     <category>Resolve</category>
-  </Davinci-Resolve>
-    <Davinci-Resolve-ProRes>
+  </Davinci-Resolve-original>
+  <Davinci-Resolve-ProRes>
     <label>ProRes</label>
-    <params>-vcodec prores_ks -qscale 0 -map 0 -acodec pcm_s16le -ac 1 -ar 22050 </params>
+    <params>-vcodec prores_ks -qscale 0 -map 0 -acodec pcm_s16le -ac 1 -ar 22050</params>
     <extension>mov</extension>
     <category>Resolve</category>
   </Davinci-Resolve-ProRes>
+  <Davinci-Resolve-720p-sem-audio>
+    <label>Remove audio - MPEG 4 - 720p</label>
+    <params>-codec:v mpeg4 -q:v 0 -an -vf scale=w=1280:h=720</params>
+    <extension>mov</extension>
+    <category>Resolve</category>
+  </Davinci-Resolve-720p-sem-audio>
+  <Davinci-Resolve-1080p-sem-audio>
+    <label>Remove audio - MPEG 4 - 1080p</label>
+    <params>-codec:v mpeg4 -map 0 -q:v 0 -an -vf scale=w=1920:h=1080</params>
+    <extension>mov</extension>
+    <category>Resolve</category>
+  </Davinci-Resolve-1080p-sem-audio>
+  <Davinci-Resolve-original-sem-audio>
+    <label>Remove audio - MPEG 4 - Mantem formato</label>
+    <params>-codec:v mpeg4 -q:v 0 -an</params>
+    <extension>mov</extension>
+    <category>Resolve</category>
+  </Davinci-Resolve-original-sem-audio>
 </presets>
